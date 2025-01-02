@@ -17,7 +17,7 @@
 
 buildPythonPackage rec {
   pname = "ical";
-  version = "8.2.0";
+  version = "8.2.0-unstable-2025-01-02";
   pyproject = true;
 
   disabled = pythonOlder "3.10";
@@ -25,8 +25,8 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "allenporter";
     repo = "ical";
-    rev = "refs/tags/${version}";
-    hash = "sha256-9mnyhDKcZTZAGRxojQN9I9ZAgBmsSSsBPzCMZO6Rl5k=";
+    rev = "de87be76b9b60946fd025967148cdf5b5fca33c1";
+    hash = "sha256-vw4JLGRdwSvQRn5Fkyse82qFSl/7ffryWAmLVNnQqEE=";
   };
 
   build-system = [ setuptools ];
