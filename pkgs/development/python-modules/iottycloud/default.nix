@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "iottycloud";
-  version = "0.2.1";
+  version = "0.3.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pburgio";
     repo = "iottyCloud";
-    rev = "refs/tags/v${version}";
+    tag = "${version}";
     hash = "sha256-EtAAUyVL7FTn0VoGmU5bU9XouMuEQUOx2t6j/wd1OEo=";
   };
 
