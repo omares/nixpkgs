@@ -138,9 +138,7 @@ in
           ProtectSystem = "strict";
           ProtectHome = true;
           WorkingDirectory = cfg.installPath;
-          ReadWritePaths = [
-            cfg.installPath
-          ];
+          ReadWritePaths = [ cfg.installPath ];
           PrivateDevices = false;
           PrivateTmp = true;
           NoNewPrivileges = true;
@@ -168,9 +166,7 @@ in
       };
     };
 
-    users.groups = lib.mkIf (cfg.group == "scrypted") {
-      ${cfg.group} = { };
-    };
+    users.groups = lib.mkIf (cfg.group == "scrypted") { ${cfg.group} = { }; };
 
     networking.firewall = lib.mkIf cfg.openFirewall {
       allowedTCPPorts = [
