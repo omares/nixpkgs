@@ -4340,7 +4340,7 @@ with pkgs;
     };
   });
 
-  netlify-cli = callPackage ../development/web/netlify-cli {
+  netlify-cli = callPackage ../by-name/ne/netlify-cli/package.nix {
     nodejs = nodejs_20;
   };
 
@@ -16092,12 +16092,6 @@ with pkgs;
   };
 
   phonemizer = with python3Packages; toPythonApplication phonemizer;
-
-  wyoming-faster-whisper = callPackage ../tools/audio/wyoming/faster-whisper.nix { };
-
-  wyoming-openwakeword = callPackage ../tools/audio/wyoming/openwakeword.nix { };
-
-  wyoming-piper = callPackage ../tools/audio/wyoming/piper.nix { };
 
   ### GAMES
 
