@@ -16,8 +16,8 @@ in
 
   src = fetchFromGitHub {
     owner = "koush";
-    repo = "${pname}";
-    rev = "v${version}";
+    repo = "scrypted";
+    tag = "v${version}";
     hash = "sha256-T4LeNn9+dl+TyWyCpaIPZpMwH71TEh1JcREP2qPbY3E=";
   };
 
@@ -42,7 +42,7 @@ in
 
   meta = {
     description = ''
-      Scrypted is a high performance home video integration platform and NVR with smart detections.
+      Scrypted is a high performance home video integration platform and NVR with smart detections
     '';
     mainProgram = "scrypted-serve";
     homepage = "https://github.com/koush/scrypted";
